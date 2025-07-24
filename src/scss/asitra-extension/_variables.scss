@@ -1,0 +1,307 @@
+$enable-antialiasing: true !default;
+$enable-rfs: true !default;
+$enable-rounded: true !default;
+$enable-negative-margins: true !default;
+
+$border-width: 1px !default;
+$border-color: #CACACA !default;
+$border-radius: 2.188rem !default;
+$border-radius-sm: 1.875rem !default;
+$border-radius-md: 2.5rem !default;
+$border-radius-lg: 3.75rem !default;
+$border-radius-pill: 9999px !default;
+
+$min-contrast-ratio: 2 !default;
+$body-color: #151515 !default;
+$text-muted: #CACACA !default;
+$headings-color: #151515 !default;
+
+$link-color: #000 !default;
+$link-decoration: none !default;
+$link-hover-decoration: none !default;
+
+
+$white: #fff !default;
+$black: #000 !default;
+$gray-100: #EFEFEF !default;
+$gray-200: #E9E9E9 !default;
+$gray-300: #D8D8D8 !default;
+$gray-400: #CACACA !default;
+$gray-500: #A5A5A5 !default;
+$gray-600: #646464 !default;
+$gray-700: #494949 !default;
+$gray-800: #252525 !default;
+$gray-900: #151515 !default;
+
+$primary: #083bef !default;
+$secondary: #252525 !default;
+$success: #12b347 !default;
+$info: #204ef0 !default;
+$warning: #f59e0b !default;
+$danger: #ff3a3a !default;
+$light: #EFEFEF !default;
+$dark: #000 !default;
+
+$primary-light: #204ef0 !default;
+$secondary-light: #646464 !default;
+$success-light: #cfefda !default;
+$info-light: #b4c4fa !default;
+$warning-light: #fef3c7 !default;
+$danger-light: #ffc3c3 !default;
+$light-light: #F7F7F7 !default;
+$dark-light: #252525 !default;
+
+$primary-dark: #0735d7 !default;
+$secondary-dark: #151515 !default;
+$success-dark: #124226 !default;
+$info-dark: #083bef !default;
+$warning-dark: #d97706 !default;
+$danger-dark: #b22828 !default;
+$light-dark: #A5A5A5 !default;
+
+$theme-colors: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    info: $info,
+    warning: $warning,
+    danger: $danger,
+    light: $light,
+    dark: $dark,
+    primary-light: $primary-light,
+    secondary-light: $secondary-light,
+    success-light: $success-light,
+    info-light: $info-light,
+    warning-light: $warning-light,
+    danger-light: $danger-light,
+    light-light: $light-light,
+    primary-dark: $primary-dark,
+    secondary-dark: $secondary-dark,
+    success-dark: $success-dark,
+    info-dark: $info-dark,
+    warning-dark: $warning-dark,
+    danger-dark: $danger-dark,
+    light-dark: $light-dark
+) !default;
+
+$blue: #083bef !default;
+$red: #ff3a3a !default;
+$orange: #f97316 !default;
+$green: #12b347 !default;
+
+$blue-100: #b4c4fa !default;
+$blue-200: #839df7 !default;
+$blue-300: #5275f3 !default;
+$blue-400: #204ef0 !default;
+$blue-500: #083bef !default;
+$blue-600: #0735d7 !default;
+$blue-700: #0529a7 !default;
+$blue-800: #041d77 !default;
+$blue-900: #021147 !default;
+$pink-100: #fce7f3 !default;
+$pink-200: #fbcfe8 !default;
+$pink-300: #f9a8d4 !default;
+$pink-400: #f472b6 !default;
+$pink-500: #ec4899 !default;
+$pink-600: #db2777 !default;
+$pink-700: #be185d !default;
+$pink-800: #9d174d !default;
+$pink-900: #831843 !default;
+
+$red-100: #ffc3c3 !default;
+$red-200: #E9E9E9 !default;
+$red-300: #ff9c9c !default;
+$red-400: #ff7575 !default;
+$red-500: #ff3a3a !default;
+$red-600: #e53434 !default;
+$red-700: #b22828 !default;
+$red-800: #7f1d1d !default;
+$red-900: #4c1111 !default;
+
+$orange-100: #ffedd5 !default;
+$orange-200: #fed7aa !default;
+$orange-300: #fdba74 !default;
+$orange-400: #fb923c !default;
+$orange-500: #f97316 !default;
+$orange-600: #ea580c !default;
+$orange-700: #c2410c !default;
+$orange-800: #9a3412 !default;
+$orange-900: #7c2d12 !default;
+
+$green-100: #cfefda !default;
+$green-200: #b7e8c7 !default;
+$green-300: #d3f3ef !default;
+$green-400: #88d9a3 !default;
+$green-500: #12b347 !default;
+$green-600: #0e8f38 !default;
+$green-700: #0a6b2a !default;
+$green-800: #07471c !default;
+$green-900: #124226 !default;
+
+$font-family-base: Arimo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$font-size-base: 1rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-lg: 1.125rem !default;
+$font-weight-bold: 700 !default;
+$font-weight-medium: 500 !default;
+$small-font-size: .875em !default;
+
+$headings-font-weight: 400 !default;
+$headings-font-family: Arimo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$headings-line-height: 1 !default;
+$headings-letter-spacing: -0.02em !default;
+
+$h1-font-size: 5.625rem !default;
+$h2-font-size: 4.5rem !default;
+$h3-font-size: 3.06rem !default;
+$h4-font-size: 1.625rem !default;
+$h5-font-size: 1.25rem !default;
+$h6-font-size: 1rem !default;
+
+$display-font-family: Arimo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$display-font-weight: 400 !default;
+$display-font-sizes: (
+    1: 10rem,
+    2: 9rem,
+    3: 8.25rem,
+    4: 4.5rem,
+    5: 3.875rem
+) !default;
+
+$font-sizes: (
+    1: 3.69rem,
+    2: 3.06rem,
+    3: 2.625rem,
+    4: 2rem,
+    5: 1.625rem,
+    6: 1.25rem,
+    7: 1.125rem,
+    8: 1rem,
+    9: 0.875rem,
+    10: 0.75rem
+) !default;
+
+$lead-font-size: 1rem !default;
+$lead-font-weight: 400 !default;
+
+$box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !default;
+$box-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
+$box-shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !default;
+$box-shadow-xl: 0px 4px 26px rgba(0, 0, 0, 0.02) !default;
+$box-shadow-inset: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06) !default;
+
+$container-max-widths: (
+    sm: 640px,
+    md: 768px,
+    lg: 1024px,
+    xl: 1360px
+) !default;
+
+$spacers: (
+    0: 0px,
+    1: 0.25rem,
+    2: 0.5rem,
+    3: 0.75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    7: 1.75rem,
+    8: 2rem,
+    9: 2.25rem,
+    10: 2.5rem,
+    11: 2.75rem,
+    12: 3rem,
+    14: 3.5rem,
+    16: 4rem,
+    20: 5rem,
+    24: 6rem,
+    28: 7rem,
+    32: 8rem,
+    36: 9rem,
+    40: 10rem,
+    44: 11rem,
+    48: 12rem,
+    52: 13rem,
+    56: 14rem,
+    60: 15rem,
+    64: 16rem,
+    72: 18rem,
+    80: 20rem,
+    96: 24rem
+) !default;
+
+$negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) !default;
+
+$badge-font-size: 0.875rem !default;
+$badge-font-weight: 500 !default;
+$badge-color: #000 !default;
+$badge-padding-y: 0.5rem !default;
+$badge-padding-x: 0.875rem !default;
+$badge-border-radius: 9999px !default;
+
+$input-btn-font-family: Arimo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !default;
+$input-btn-font-size: 1rem !default;
+$input-btn-font-size-sm: 1rem !default;
+$input-btn-font-size-lg: 1rem !default;
+$input-btn-padding-y: 1rem !default;
+$input-btn-padding-x: 2rem !default;
+$input-btn-padding-y-sm: 0.75rem !default;
+$input-btn-padding-x-sm: 2rem !default;
+$input-btn-padding-y-lg: 1.25rem !default;
+$input-btn-padding-x-lg: 2rem !default;
+$input-btn-line-height: 1.25 !default;
+$input-btn-border-radius: 9999px !default;
+
+$btn-text-transform: null !default;
+$btn-border-radius: 9999px !default;
+$btn-border-radius-sm: 9999px !default;
+$btn-border-radius-lg: 9999px !default;
+$btn-font-weight: 600 !default;
+$btn-border-width: 1.5px !default;
+
+$input-color: #494949 !default;
+$input-bg: transparent !default;
+$input-focus-border-color: #083bef !default;
+$input-placeholder-color: #646464 !default;
+$input-font-size: 1rem !default;
+$input-padding-y: 1.25rem !default;
+$input-padding-x: 2rem !default;
+$input-border-radius: 9999px !default;
+$input-border-color: #CACACA !default;
+
+$form-range-track-bg: #3f3f46 !default;
+$form-range-thumb-bg: #083bef !default;
+
+$nav-link-font-size: 1rem !default;
+$nav-link-font-weight: 500 !default;
+
+$navbar-padding-y: 1.5rem !default;
+$navbar-padding-x: 1.25rem !default;
+$navbar-nav-link-padding-x: 1.25rem !default;
+$navbar-light-color: #000 !default;
+$navbar-light-hover-color: #18181b !default;
+$navbar-light-active-color: #18181b !default;
+$navbar-light-disabled-color: #71717a !default;
+$navbar-dark-color: #fff !default;
+$navbar-dark-hover-color: #f4f4f5 !default;
+$navbar-dark-active-color: #e4e4e7 !default;
+$navbar-dark-disabled-color: #71717a !default;
+
+
+$alert-color: null !default;
+$alert-font-size: null !default;
+$alert-border-width: $border-width !default;
+$alert-border-radius: $border-radius !default;
+
+$alert-border-top-width: $alert-border-width !default;
+$alert-border-right-width: $alert-border-width !default;
+$alert-border-bottom-width: $alert-border-width !default;
+$alert-border-left-width: $alert-border-width !default;
+
+$alert-border-top-right-radius: $alert-border-radius !default;
+$alert-border-top-left-radius: $alert-border-radius !default;
+$alert-border-bottom-right-radius: $alert-border-radius !default;
+$alert-border-bottom-left-radius: $alert-border-radius !default;
+
+$badge-text-transform: null !default;
+$navbar-toggler-border: $border-width !default;
