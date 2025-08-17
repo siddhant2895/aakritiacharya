@@ -92,6 +92,12 @@ body {
   padding: 0 20px;
 }
 
+/* Hero Section */
+.sicily-hero {
+  background: url("../images/destinations/Sicily/hero.jpg") no-repeat center
+    center/cover;
+}
+
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -342,4 +348,138 @@ h2 {
 }
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* About Destination (Overview) */
+.about-destination {
+  margin: 3rem auto;
+  padding: 60px 30px;
+  background: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  text-align: center;
+}
+
+.about-destination h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+}
+
+.about-destination p {
+  font-family: "Lora", serif;
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+/* Experiences */
+.experiences {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.experiences h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Playfair Display", serif;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.experience-card {
+  background: #fafafa;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.experience-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin: 15px;
+  color: #2c2c2c;
+}
+
+.experience-card p {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  color: #555;
+  padding: 0 15px 20px;
+  line-height: 1.6;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Luxury Stays */
+.luxury-stays {
+  padding: 80px 20px;
+  background: #fafafa;
+}
+
+.luxury-stays h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+  color: #2c2c2c;
+}
+
+.stay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.stay-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stay-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.stay-card h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin: 15px 0 10px;
+  color: #2c2c2c;
+}
+
+.stay-card p {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+  color: #555;
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+
+.stay-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
