@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../components/Footer.jsx';
 import Hero from '../components/Hero.jsx';
 import Navbar from '../components/Navbar.jsx';
@@ -50,11 +51,17 @@ export default function Mallorca() {
           <h2>Experiences to Savor</h2>
           <div className="experience-grid">
             {mallorcaExperiences.map((experience) => (
-              <div className="experience-card" key={experience.title}>
-                <img src={experience.image} alt={experience.title} />
-                <h3>{experience.title}</h3>
-                <p>{experience.description}</p>
-              </div>
+              <Link
+                to={`/destinations/mallorca/experiences/${experience.slug}`}
+                className="card-link"
+                key={experience.slug}
+              >
+                <div className="experience-card">
+                  <img src={experience.image} alt={experience.title} />
+                  <h3>{experience.title}</h3>
+                  <p>{experience.description}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -63,11 +70,13 @@ export default function Mallorca() {
           <h2>Luxury Stays in Mallorca</h2>
           <div className="stay-grid">
             {mallorcaStays.map((stay) => (
-              <div className="stay-card" key={stay.title}>
-                <img src={stay.image} alt={stay.title} />
-                <h3>{stay.title}</h3>
-                <p>{stay.description}</p>
-              </div>
+              <Link to={`/destinations/mallorca/stays/${stay.slug}`} className="card-link" key={stay.slug}>
+                <div className="stay-card">
+                  <img src={stay.image} alt={stay.title} />
+                  <h3>{stay.title}</h3>
+                  <p>{stay.description}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
