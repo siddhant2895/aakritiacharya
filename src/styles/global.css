@@ -5,11 +5,31 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Segoe UI", sans-serif;
+:root {
+  font-family: 'Segoe UI', sans-serif;
   color: #333;
   line-height: 1.6;
   background-color: #fdfdfd;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 90px;
 }
 
 /* Navigation */
@@ -18,16 +38,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(8px);
 }
 
-/* LOGO STYLING */
 .logo {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #2c2c2c;
@@ -37,18 +57,14 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
-}
-
-/* Golden gradient text for a classy touch */
-.logo {
+  text-decoration: none;
   background: linear-gradient(90deg, #c0a062, #e3d8b5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Underline flourish */
 .logo::after {
-  content: "";
+  content: '';
   display: block;
   width: 60%;
   height: 2px;
@@ -58,7 +74,6 @@ body {
   transition: width 0.3s ease;
 }
 
-/* Hover effect */
 .logo:hover::after {
   width: 90%;
 }
@@ -69,19 +84,82 @@ body {
   gap: 20px;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+.nav-links li {
+  display: flex;
 }
 
-.nav-links a:hover {
+.nav-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
   color: #c59d5f;
 }
 
-/* Hero Section */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: #2c2c2c;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 65%;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Hero */
 .hero {
-  background: url("images/hero.jpg") no-repeat center center/cover;
+  background: url('/images/hero.jpg') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -92,20 +170,24 @@ body {
   padding: 0 20px;
 }
 
-/* Hero Section */
+.small-hero {
+  height: 70vh;
+}
+
 .sicily-hero {
-  background: url("../images/destinations/Sicily/hero.jpg") no-repeat center
-    center/cover;
+  background: url('/images/destinations/Sicily/hero.jpg') no-repeat center center/cover;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 30px;
+  font-family: 'Lora', serif;
 }
 
 .btn-primary {
@@ -114,6 +196,8 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -133,8 +217,52 @@ h2 {
   text-align: center;
 }
 
+/* About */
+.about {
+  margin: 2rem auto;
+  padding: 40px 20px;
+  text-align: center;
+  background: #fafafa;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #2c2c2c;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.about h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #c0a062;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+.about p {
+  font-family: 'Lora', serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 22px;
+}
+
+.about:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
 /* Destinations */
-.destination-grid {
+.destinations .destination-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
@@ -146,6 +274,8 @@ h2 {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .destination-card img {
@@ -156,13 +286,27 @@ h2 {
 
 .destination-card h3 {
   margin: 15px 0 5px;
+  font-family: 'Playfair Display', serif;
 }
 
 .destination-card p {
   padding: 0 15px 15px;
+  font-family: 'Lora', serif;
+  color: #555;
 }
 
-/* Journal Section */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .destination-card,
+.destination-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* Journal */
 .journal {
   background: #fff;
   border-radius: 16px;
@@ -172,14 +316,14 @@ h2 {
 }
 
 .journal h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.6rem;
   color: #2c2c2c;
   margin-bottom: 15px;
 }
 
 .journal-intro {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-size: 1.15rem;
   color: #555;
   text-align: center;
@@ -204,14 +348,14 @@ h2 {
 }
 
 .journal-card h3 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #2f2f2f;
 }
 
 .journal-card p {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   color: #555;
   margin-bottom: 20px;
 }
@@ -222,10 +366,15 @@ h2 {
   text-decoration: none;
   letter-spacing: 0.5px;
   position: relative;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 }
 
 .journal-link::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -263,24 +412,7 @@ h2 {
   }
 }
 
-/* Footer */
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.footer a {
-  color: #c59d5f;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-/* Collaborations Section */
+/* Collaborations */
 .collaborations {
   padding: 80px 20px;
   text-align: center;
@@ -302,7 +434,6 @@ h2 {
   line-height: 1.6;
 }
 
-/* Logos grid */
 .collab-logos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -326,7 +457,6 @@ h2 {
   transform: scale(1.08);
 }
 
-/* Responsive tweaks */
 @media (max-width: 768px) {
   .collaborations h2 {
     font-size: 2rem;
@@ -345,113 +475,7 @@ h2 {
   }
 }
 
-/* ABOUT SECTION */
-.about {
-  margin: 2rem auto;
-  padding: 40px 20px;
-  text-align: center;
-  background: #fafafa; /* light, clean background */
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-}
-
-.about h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  color: #2c2c2c;
-  letter-spacing: 1px;
-  position: relative;
-  display: inline-block;
-}
-
-.about h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #c0a062; /* classy gold accent */
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-.about p {
-  font-family: "Lora", serif;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 22px;
-}
-
-.about p:last-child {
-  margin-bottom: 0;
-}
-
-/* Subtle hover effect for elegance */
-.about:hover {
-  transform: translateY(-3px);
-  transition: all 0.3s ease;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-}
-
-/* ------------------- */
-/* HAMBURGER NAV STYLES */
-/* ------------------- */
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 1100; /* above menu */
-}
-
-.hamburger span {
-  width: 26px;
-  height: 3px;
-  background: #2c2c2c;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Mobile Nav */
-@media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 65%;
-    background: #fff;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* Animate hamburger into X */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* About Destination (Overview) */
+/* Destination page */
 .about-destination {
   margin: 3rem auto;
   padding: 60px 30px;
@@ -463,124 +487,120 @@ h2 {
 }
 
 .about-destination h2 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #2c2c2c;
 }
 
 .about-destination p {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-size: 1.1rem;
   color: #444;
   margin-bottom: 18px;
   line-height: 1.8;
 }
 
-/* Experiences */
-.experiences {
-  padding: 80px 20px;
-  background: #fff;
-}
-
-.experiences h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 40px;
-  font-family: "Playfair Display", serif;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.experience-card {
-  background: #fafafa;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.experience-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.experience-card h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
-  margin: 15px;
-  color: #2c2c2c;
-}
-
-.experience-card p {
-  font-family: "Lora", serif;
-  font-size: 1rem;
-  color: #555;
-  padding: 0 15px 20px;
-  line-height: 1.6;
-}
-
-.experience-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-/* Luxury Stays */
+.experiences,
 .luxury-stays {
   padding: 80px 20px;
-  background: #fafafa;
 }
 
+.experiences h2,
 .luxury-stays h2 {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 50px;
-  font-family: "Playfair Display", serif;
-  color: #2c2c2c;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
 }
 
+.experience-grid,
 .stay-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
 }
 
+.experience-card,
 .stay-card {
-  background: #fff;
+  background: #fafafa;
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
+.experience-card img,
 .stay-card img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
 }
 
+.experience-card h3,
 .stay-card h3 {
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
   margin: 15px 0 10px;
   color: #2c2c2c;
 }
 
+.experience-card p,
 .stay-card p {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-size: 1rem;
   color: #555;
   padding: 0 20px 20px;
   line-height: 1.6;
 }
 
+.experience-card:hover,
 .stay-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer a {
+  color: #c59d5f;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+.fade-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 80px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.05rem;
+  }
 }
