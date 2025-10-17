@@ -168,6 +168,8 @@ main {
   color: white;
   text-align: center;
   padding: 0 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .small-hero {
@@ -182,6 +184,19 @@ main {
 }
 .mallorca-hero {
   background: url('/images/mallorca.jpg') no-repeat center center/cover;
+}
+
+.detail-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.detail-hero .hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-content h1 {
@@ -208,6 +223,21 @@ main {
 
 .btn-primary:hover {
   background-color: #b38a4c;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid #c59d5f;
+  color: #c59d5f;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #c59d5f;
+  color: white;
 }
 
 /* Sections */
@@ -565,6 +595,72 @@ h2 {
 .stay-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.detail-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 90px 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.detail-image-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+.detail-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: 'Lora', serif;
+  color: #3a3a3a;
+}
+
+.detail-body p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.detail-highlights {
+  margin-top: 10px;
+}
+
+.detail-highlights h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2c2c2c;
+}
+
+.detail-highlights ul {
+  list-style: disc;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.detail-highlights li {
+  font-size: 1rem;
+}
+
+.detail-actions {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .detail-content {
+    padding: 70px 20px;
+  }
 }
 
 /* Footer */
