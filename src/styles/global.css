@@ -177,6 +177,12 @@ main {
 .sicily-hero {
   background: url('/images/destinations/Sicily/hero.jpg') no-repeat center center/cover;
 }
+.vienna-hero {
+  background: url('/images/vienna.jpg') no-repeat center center/cover;
+}
+.mallorca-hero {
+  background: url('/images/mallorca.jpg') no-repeat center center/cover;
+}
 
 .hero-content h1 {
   font-size: 3rem;

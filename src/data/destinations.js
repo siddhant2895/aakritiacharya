@@ -9,11 +9,13 @@ export const featuredDestinations = [
     name: 'Vienna, Austria',
     description: 'Coffeehouse culture, imperial elegance, and classical charm.',
     image: '/images/vienna.jpg',
+    link: '/destinations/vienna',
   },
   {
     name: 'Mallorca, Spain',
     description: 'Secluded coves, rustic fincas, and a gentle pace under the sun.',
     image: '/images/mallorca.jpg',
+    link: '/destinations/mallorca',
   },
 ];
 
@@ -30,14 +32,14 @@ export const journalEntries = [
     description:
       'A guide to the salons where artists gather, blending imperial heritage with modern craftsmanship.',
     linkLabel: 'Partner with me',
-    link: '#contact',
+    link: '/destinations/vienna',
   },
   {
     title: 'Mallorca’s Hidden Fincas',
     description:
       'Explore secluded retreats that celebrate Mediterranean design, sustainability, and bespoke hospitality.',
     linkLabel: 'Discover collaborators',
-    link: '#collaborations',
+    link: '/destinations/mallorca',
   },
 ];
 
