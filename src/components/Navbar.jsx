@@ -31,7 +31,7 @@ export default function Navbar({ onNavigateSection }) {
       <Link to="/" onClick={closeMenu} className="logo">
         Aakriti Acharya
       </Link>
-      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+      <ul id="primary-navigation" className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         {sectionLinks.map((link) => (
           <li key={link.id}>
             <button
@@ -49,6 +49,8 @@ export default function Navbar({ onNavigateSection }) {
         className={`hamburger ${isMenuOpen ? 'active' : ''}`}
         onClick={toggleMenu}
         aria-label="Toggle menu"
+        aria-expanded={isMenuOpen}
+        aria-controls="primary-navigation"
       >
         <span />
         <span />
